@@ -16,8 +16,9 @@ cat > ~/Desktop/tvlc.sh << EOF
 #!/bin/bash
 
 # Restart vlc if it crashes
-VLC=vlc --vout mmal_vout --mmal-adjust-refreshrate --deinterlace 0 --extraintf=http --http-password foo --preferred-resolution=360
-while [ True ]; do $VLC; done
+while [ True ]; do 
+  vlc --vout mmal_vout --mmal-adjust-refreshrate --deinterlace 0 --extraintf=http --http-password foo --preferred-resolution=360
+done
 EOF
 
 cat > .config/autostart/tvlc.desktop << EOF
