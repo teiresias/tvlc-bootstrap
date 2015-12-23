@@ -11,6 +11,8 @@ cd vlc-2.2
 ./configure --prefix=/usr/local --enable-mmal --enable-rpi-omxil --enable-flac --enable-omxil --enable-omxil-vout --enable-dbus --enable-libmpeg2 --enable-vpx --enable-mkv --enable-mpc --enable-theora --enable-dvbpsi --enable-x264 --enable-bluray=no
 ./compile
 echo $?
+sudo make install
+echo $?
 
 cat > ~/Desktop/tvlc.sh << EOF
 #!/bin/bash
