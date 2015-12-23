@@ -14,7 +14,7 @@ echo $?
 sudo make install
 echo $?
 
-cat > ~/Desktop/tvlc.sh << EOF
+cat > ~/tvlc.sh << EOF
 #!/bin/bash
 
 # Restart vlc if it crashes
@@ -23,8 +23,10 @@ while [ True ]; do
 done
 EOF
 
-cat > .config/autostart/tvlc.desktop << EOF
+chmod +x ~/tvlc.sh
+
+cat > ~/.config/autostart/tvlc.desktop << EOF
 [Desktop Entry]
 Type=Application
-Exec=/home/pi/Desktop/tvlc.sh
+Exec=/home/pi/tvlc.sh
 EOF
